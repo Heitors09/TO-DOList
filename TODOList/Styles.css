@@ -1,0 +1,153 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  /*tirando a sombra de divisão */
+
+} 
+/*parametro para resetar alguns valores*/
+
+.input-task{
+    border: none;
+    /*tirando a borda do input*/
+    border-radius: 10px;
+    /*arredondando os cantos*/
+    width: 300px;
+    /*aumentando a largura*/
+    height:40px;
+    /*altura*/
+    padding-left: 10px;
+    /*descolar o texto da caixa de input do lado esquerdo(left), padding espaçamento dos itens*/
+
+}
+
+.button-task{
+    border: none;
+    /*tirando as bordas do botão*/
+    border-radius: 10px;
+    /*arredondando as bordas*/
+    height: 40px;
+    /*altura do botão*/
+    background-color:  #033290;
+    /*cor de fundo do botão*/
+    padding: 0 15px;
+    /*espaçamento dos itens*/
+    color: #ffff;
+    /*cor da letra*/
+    /*poderia por um font-size, para por o tamanho da fonte */
+    float: right;
+    /*joga o botão pra direita*/
+    cursor: pointer;
+    /*quando passar encima do botão o cursor do mouse muda pra a "mãozinha*/
+
+}
+
+
+/*para quando o mouse passar encima do botão ele mude de cor e perceba que está selecionavel*/
+/*hover nome do "evento" que acontece*/
+.button-task:hover{
+      opacity: 0.8;
+      /*quando passar o mouse a opacidade ou transparencia do item diminui*/
+}
+
+/*outro evento para quando o botão for "active"*/
+.button-task:active{
+     opacity:0.6;
+}
+
+.list-tasks{
+     width: 100%;
+     /*aumentando a largura para ocupar linha inteira*/
+     list-style: none;
+     /*reseta o style padrão da lista "tira as bolinhas*/
+     margin-top: 10px;
+     /*margem da lista como um todo em relação aos outros itens na div*/
+
+}
+/*classe para lista como um todo*/
+.task{
+    background-color: #f2f2f2;
+    /*mudando a cor de fundo padrão do item na lista*/
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+    /*colocando uma aspecto de sombreamento na caixa do item da lista
+    geralmente se encontra em sites da internet*/
+    display: flex;
+    /*para que todos os itens (img,paragrafo) em questão fiquem na mesma linha*/
+    height: 40px;
+    /*aumentando a altura do item na lista*/
+    align-items: center;
+    /*coloca todos os itens ao centro na vertical em ralação ao espaço da box do item da lista*/
+    justify-content: space-between;
+    /*dá um espaço entre os itens dentro da "box" colocando de forma totalmente separada
+    quase como se fosse um pra cada canto*/
+    padding: 0 15px;
+    /*padding para que os itens não fiquem colados aos lados da "box" do item */
+    border-radius: 10px;
+    /*arredondando as bordas*/
+    margin-bottom: 10px;
+    /*aumento da margem em ralação ao próximo item da lista*/
+    cursor: pointer;
+    /*quando passa o mouse encima da task , cursor se torna a "mãozinha"*/
+
+}
+/*uma classe para estlizar um item especifico da lista*/
+
+.task:hover img{
+   opacity:1;  
+}
+
+/*evento hover, quando passo o mouse encima a imagem de op 0 predefinida fica com opacity 1 e visivel*/
+
+
+
+
+/*usar a tag de img para estilizar por ter poucas imagens*/
+img{
+    height: 25px;
+    /*height, ou seja a altura da imagem foi definida em 25pixels*/
+    opacity:0;
+    /*deixa transparente para criar o efeito de quando passar o mouse encima ele aparecer*/
+    transition: opacity 0.5s ease-in-out;
+    /*transition para que o opacity não fique grosseiro, primeiro qual efeito voce escolhe
+    para receber a transição, após isso o tempo, depois o tipo de transição*/
+
+    /*ease-in-out, transição na entrada e saida, quando poem e tira o mouse*/
+}
+
+.container{
+     background-color: #d1d1d1;
+     /*cor de fundo do container referenciado*/
+     width: 500px;
+     /*width é a largura do container referenciado*/
+     border-radius: 10px;
+     /*arredondamento das bordas*/
+     padding: 20px;
+     /*espaçamento interno do container*/
+
+
+     /*para centralizar a box
+     margin-left: auto;
+     margin-right: auto;
+     /*deixa as margens do lado esquerdo e direito automaricas, assim centralizando a div
+     margin-top: 100px;
+     /*para afastar o container da parte de cima do site*/
+     /*par economizar linhas: */
+     margin:100px auto 0;
+     /*primeiro a de cima, após os lados, e por ultimo embaixo*/
+}
+/*para referenciar uma classe criada , por um pontinho à frente */
+
+body{
+    background: url(./img/sabaody\ background.jpg);
+    /*chamando um url de imagem dentro de uma estilização de bg do body*/
+}
+/*ultilizando a tag para estilizar completamente o body inteiro do site*/
+
+.done{
+    background-color: #8fac55;
+    text-decoration: line-through;
+}
+/*classe usada se a condição daquela função receber o valor true do objeto*/
+
